@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    
+/* HEADING */
+.center {
+    border: 2px solid white;
+    border-radius: 12px;
+    margin-right: 403px;
+    margin-left: 403px;
+    padding-left: 76px;
+    padding-right: 17px;
+    margin-top: 60px;
+}
+
+/* QUESTIONS AND OPTIONS */
+.center0 {
+    border: 2px solid orange;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-right: 400px;
+    margin-left: 400px;
+    padding-left: 30px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    background-color: white;
+}
+
+/* INSERT NAME BOX */
+.center1 {
+    margin-top: 90px;
+    margin-left: 385px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 10px;
+}
+
+/* CHECK AND SAVE RESULT BUTTONS */
+.center2 {
+    margin-left: 402px;
+    margin-top: auto;
+}
+
+/* COUNTDOWN TIMER */
+.center4 {
+    margin-top: 0px;
+    margin-left: 55px;
+    font-size: 35px;
+    height: 0px;
+    padding-top: 30px;
+    float: left;
+}
+
+/* QUESTIONS AND OPTIONS ALTOGETHER */
+.center5 {
+    margin-top: 40px;
+}
+
+/* ANIMATION BACKGROUND */
+body {
+    background-image: url("ani.gif");
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-iteration-count: infinite;
+}
+
+</style>
+
+    <head>
+        
+        <script src="js file.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- TIMER -->
+        <div class="center4">
+            <span id="time">01:00</span>
+
+            <p id="time"></p>
+        </div>
+
+        <!--HEADING-->
+        <div class="center">
+            <h1>Are you an introvert or an extrovert?</h1>
+        </div>
+
+        <!-- BRING EVERYTHING TO THE CENTER -->
+
+        <div class="center5">
+            <div class="center0">
+            <!-- QUESTION 1 -->
+            <p><b>Do you enjoy hanging out or staying home?</b></p> 
+
+            <!-- Q1 OPTIONS 1 & 2 -->
+            <input id="optn1" name="grp1" type="radio" value = "Hanging out">Hanging out</input><br>
+            <input id="optn2" name="grp1" type="radio" value = "Staying home">Staying home</input><br>
+            
+            </div>
+
+            <p id="optn1ans"></p>
+
+            <div class="center0">
+            <!-- QUESTION 2 -->
+            <p><b>You just had a bad day. You want to regain your energy by...</b></p>
+
+            <!-- Q2 OPTIONS 1 & 2 -->
+            <input id="optn3" name="grp2" type="radio" value = "Going out with a group of friends to forget about it.
+            The more people, the more comfortable you feel">Going out with a group of friends to forget about it.
+            The more people, the more comfortable you feel</input><br>
+            <input id="optn4" name="grp2" type="radio" value = "Going home and doing your own thing
+            (reading books, playing games, etc.)">Going home and doing your own thing
+            (reading books, playing games, etc.)</input><br>
+            </div>
+
+            <div class="center0">
+            <!-- QUESTION 3 -->
+            <!-- PRINT QUESTION 3 -->
+            <p><b>In a social event, you usually...</b></p> 
+
+            <!-- CREATE A 'RADIO BUTTON' SO THE USER CAN ONLY SELECT AN OPTION FOR QUESTION 3 -->
+            <input id="optn5" name="grp3" type="radio" value = "Look for people you know and stick with them. If you can't find anyone you're familiar with,
+            you usually find a corner to enjoy your food">Look for people you know and stick with them. If you can't find anyone you're familiar with,
+            you usually find a corner to enjoy your food</input><br>
+            <input id="optn6" name="grp3" type="radio" value = "Talk to a new person or a new group of people that you think
+            are easy to approach or may have the same interests as you">Talk to a new person or a new group of people that you think
+            are easy to approach or may have the same interests as you</input><br>
+            </div>
+            
+            <div class="center0">
+            <!-- QUESTION 4 -->
+            <!-- PRINT QUESTION 4 -->
+            <p><b>After attending a social event or going out with your friends, you usually feel...</b></p>
+
+            <!-- CREATE A 'RADIO BUTTON' SO THE USER CAN ONLY SELECT AN OPTION FOR QUESTION 4 -->
+            <input id="optn7" name="grp4" type="radio" value = "Tired and run out of energy even when you had fun">Tired and run out of energy even when you had fun</input><br>
+            <input id="optn8" name="grp4" type="radio" value = "Excited and ready for the next meetup">Excited and ready for the next meetup</input><br>
+            </div>
+        </div>
+
+        <!-- STORE RESULT -->
+        <p id="result"></p>
+
+        <div class="center1">
+        <!-- CREATE A BAR TO ENTER THE USER NAME WHICH IS THEN STORED INSIDE THE JAVASCRIPT FUNCTION ABOVE AND PRINT OUT WITH THE MESSAGE -->
+        <input id="name" placeholder="Enter your name here">
+        </div>
+
+        <!-- BRING EVERYTHING TO THE CENTER -->
+        <div class="center2">
+
+        <!-- CREATE A BUTTON TO CHECK THE RESULT OF WHETHER THE USER IS AN INTROVERT/EXTROVERT -->
+        <button onclick="function1()" id="btn">Check result</button>
+
+        <!-- CREATE A BUTTON TO SAVE THE RESULT -->
+        <button id="btn1" value="Save Result" onclick="saveTextAsFile()">Save Result</button>
+        </div>
+
+    </body>
+</html>
